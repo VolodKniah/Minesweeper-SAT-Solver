@@ -108,3 +108,6 @@ The output:
 The search for a non-trivial instance was unsuccessful. The attempts included a 128x128 board with alternating '?' and '2' cells (8192 variables, 64515 clauses, 0.072s solution time), as well as a random 20x20 board from a real game of Minesweeper (solved in 0.19s). Evidently, a longer-running instance would take both a longer board and more varied cells, which cannot be generated randomly due to high risk of unsatisfiability, and is tricky to create by hand.
 ## Conclusion:
 As evidenced by the instances above, the script can solve both sizeable and varied boards in a trivial amount of time. Particularly, the size of the board barely matters if it contains similar, overlapping patterns.
+
+## Note:
+My installation of glucose may slightly differ from the usual one, so if the output file turns out empty, change 'glucose' in line 130 to your preferred glucose executable.

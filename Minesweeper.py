@@ -159,7 +159,7 @@ with open('output.txt') as o:
             print(r)
     else:
         print('Unsatisfiable!')
-print('For stats print "s", for CNF formula print "c", for both print"s+c"')
+print('For stats input "s", for CNF formula input "c", for both input "s+c"')
 f = open('input.cnf')
 appendix = input()
 if appendix == 's':
@@ -167,4 +167,5 @@ if appendix == 's':
 elif appendix == 'c':
     print(f.read())
 elif appendix == 's+c':
+
     print(stats + f.read())

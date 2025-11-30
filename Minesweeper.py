@@ -33,9 +33,8 @@ board = []
 language = {}
 v_i = {}
 for r in sys.stdin:
-    k = len(r)
-    board += r.strip().split()
-variable = 1
+     k = len(r)
+     board += r.strip().split()
 
 clauses = set()
 i = 0
@@ -128,7 +127,7 @@ with open('input.cnf', 'w') as f:
             f.write(str(l) + ' ')
         f.write('0\n')
 result = subprocess.run(
-    ['glucose-syrup.exe', '-model', 'input.cnf'],
+    ['glucose', '-model', 'input.cnf'],
     capture_output=True,
     text=True
 )
@@ -159,7 +158,7 @@ with open('output.txt') as o:
             print(r)
     else:
         print('Unsatisfiable!')
-print('For stats input "s", for CNF formula input "c", for both input "s+c"')
+print('For stats print "s", for CNF formula print "c", for both print"s+c"')
 f = open('input.cnf')
 appendix = input()
 if appendix == 's':
@@ -167,5 +166,4 @@ if appendix == 's':
 elif appendix == 'c':
     print(f.read())
 elif appendix == 's+c':
-
     print(stats + f.read())
